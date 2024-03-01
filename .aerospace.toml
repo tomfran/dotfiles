@@ -13,11 +13,11 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands.html
 
-after-startup-command = [
+#after-startup-command = [
     # JankyBorders has a built-in detection of already running process,
     # so it won't be run twice on AeroSpace restart
-    'exec-and-forget borders',
-]
+#    'exec-and-forget borders'
+#]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -47,11 +47,11 @@ default-root-container-orientation = 'auto'
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide.html#assign-workspaces-to-monitors
 gaps.inner.horizontal = 8
-gaps.inner.vertical = 8
-gaps.outer.left = 8
-gaps.outer.bottom = 8
-gaps.outer.top = 8
-gaps.outer.right = 8
+gaps.inner.vertical =   8
+gaps.outer.left =       8
+gaps.outer.bottom =     8
+gaps.outer.top =        8
+gaps.outer.right =      8
 
 # Visual indent makes it easier to understand that containers of the same orientation are nested.
 # If you have 'enable-normalization-opposite-orientation-for-nested-containers' enabled then
@@ -114,16 +114,6 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
 
-# alt-q = 'workspace 0'
-# alt-w = 'workspace 1'
-# alt-e = 'workspace 2'
-# alt-r = 'workspace 3'
-# alt-t = 'workspace 4'
-# alt-y = 'workspace 5'
-# alt-u = 'workspace 6'
-# alt-i = 'workspace 7'
-# alt-o = 'workspace 8'
-# alt-p = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands.html#move-node-to-workspace
 alt-ctrl-1 = 'move-node-to-workspace 1'
@@ -136,17 +126,7 @@ alt-ctrl-7 = 'move-node-to-workspace 7'
 alt-ctrl-8 = 'move-node-to-workspace 8'
 alt-ctrl-9 = 'move-node-to-workspace 9'
 alt-ctrl-0 = 'move-node-to-workspace 10'
-
-# alt-ctrl-w = 'move-node-to-workspace 1'
-# alt-ctrl-e = 'move-node-to-workspace 2'
-# alt-ctrl-r = 'move-node-to-workspace 3'
-# alt-ctrl-t = 'move-node-to-workspace 4'
-# alt-ctrl-y = 'move-node-to-workspace 5'
-# alt-ctrl-u = 'move-node-to-workspace 6'
-# alt-ctrl-i = 'move-node-to-workspace 7'
-# alt-ctrl-o = 'move-node-to-workspace 8'
-# alt-ctrl-p = 'move-node-to-workspace 9'
-# alt-ctrl-q = 'move-node-to-workspace 10'
+alt-ctrl-m = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands.html#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -162,10 +142,7 @@ alt-ctrl-slash = 'mode join'
 [mode.service.binding]
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 #s = ['layout sticky tiling', 'mode main'] # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-f = [
-    'layout floating tiling',
-    'mode main',
-] # Toggle between floating and tiling layout
+f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 esc = ['reload-config', 'mode main']
 
@@ -177,3 +154,7 @@ alt-ctrl-j = ['join-with down', 'mode main']
 alt-ctrl-k = ['join-with up', 'mode main']
 alt-ctrl-l = ['join-with right', 'mode main']
 esc = 'mode main'
+
+[workspace-to-monitor-force-assignment]
+1 = 'secondary'
+2 = 'secondary'
