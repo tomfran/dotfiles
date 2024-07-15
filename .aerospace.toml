@@ -1,0 +1,95 @@
+after-login-command = []
+after-startup-command = []
+
+start-at-login = true
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+gaps.outer.top = 7
+gaps.outer.bottom = 8
+gaps.outer.right = 8
+gaps.outer.left = 8
+gaps.inner.horizontal = 8
+gaps.inner.vertical = 8
+
+[mode.main.binding]
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
+
+alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
+
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+alt-ctrl-h = 'move left'
+alt-ctrl-j = 'move down'
+alt-ctrl-k = 'move up'
+alt-ctrl-l = 'move right'
+
+alt-ctrl-minus = 'resize smart -50'
+alt-ctrl-equal = 'resize smart +50'
+
+alt-ctrl-shift-minus = 'resize smart -200'
+alt-ctrl-shift-equal = 'resize smart +200'
+
+alt-1 = 'workspace 01'
+alt-2 = 'workspace 02'
+alt-3 = 'workspace 03'
+alt-4 = 'workspace 04'
+alt-5 = 'workspace 05'
+alt-6 = 'workspace 06'
+alt-7 = 'workspace 07'
+alt-8 = 'workspace 08'
+alt-9 = 'workspace 09'
+alt-0 = 'workspace 10'
+
+alt-ctrl-1 = 'move-node-to-workspace 01'
+alt-ctrl-2 = 'move-node-to-workspace 02'
+alt-ctrl-3 = 'move-node-to-workspace 03'
+alt-ctrl-4 = 'move-node-to-workspace 04'
+alt-ctrl-5 = 'move-node-to-workspace 05'
+alt-ctrl-6 = 'move-node-to-workspace 06'
+alt-ctrl-7 = 'move-node-to-workspace 07'
+alt-ctrl-8 = 'move-node-to-workspace 08'
+alt-ctrl-9 = 'move-node-to-workspace 09'
+alt-ctrl-0 = 'move-node-to-workspace 10'
+alt-ctrl-m = 'move-workspace-to-monitor --wrap-around next'
+
+alt-tab = 'workspace-back-and-forth'
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+alt-ctrl-semicolon = 'mode service'
+alt-ctrl-slash = 'mode join'
+
+cmd-h = []
+cmd-m = []
+
+[mode.service.binding]
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']
+esc = ['reload-config', 'mode main']
+
+[mode.join.binding]
+alt-ctrl-h = ['join-with left', 'mode main']
+alt-ctrl-j = ['join-with down', 'mode main']
+alt-ctrl-k = ['join-with up', 'mode main']
+alt-ctrl-l = ['join-with right', 'mode main']
+esc = 'mode main'
+
+[workspace-to-monitor-force-assignment]
+01 = 'secondary'
+02 = 'secondary'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.clock'
+run = ['layout floating']
