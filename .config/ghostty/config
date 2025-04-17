@@ -1,0 +1,9 @@
+theme = dark:zenwritten_dark,light:zenwritten_light
+
+font-family = "BlexMono Nerd Font"
+font-size = "18"
+
+window-padding-x = 10
+window-padding-y = 10
+
+macos-titlebar-proxy-icon = hidden

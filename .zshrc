@@ -16,6 +16,8 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 # Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -25,7 +27,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab 
 zinit snippet OMZP::git
-zinit snippet OMZP::sudo
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -56,11 +57,16 @@ setopt hist_find_no_dups
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Aliases
 alias update="brew update && brew upgrade && brew upgrade --cask --greedy && brew autoremove && brew cleanup --prune=all"
 alias ls="ls --color"
-alias ll="ls -l"
-
+alias l="ls -l"
+alias la="l -a"
+alias c="clear"
+alias ..="cd .."
+alias openwebui="docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -68,3 +74,4 @@ alias ll="ls -l"
 # FZF
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
