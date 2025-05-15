@@ -6,17 +6,17 @@ start-at-login = true
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-accordion-padding = 30
+accordion-padding = 50
 
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
 
-gaps.outer.top = 0
-gaps.outer.bottom = 0
-gaps.outer.right = 0
-gaps.outer.left = 0
-gaps.inner.horizontal = 0
-gaps.inner.vertical = 0
+gaps.outer.top = 8
+gaps.outer.bottom = 8
+gaps.outer.right = 8
+gaps.outer.left = 8
+gaps.inner.horizontal = 8
+gaps.inner.vertical = 8
 
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 
@@ -112,8 +112,4 @@ run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.AppStore'
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'
 run = ['layout floating']

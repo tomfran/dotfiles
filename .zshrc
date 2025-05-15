@@ -67,6 +67,7 @@ alias la="l -a"
 alias c="clear"
 alias ..="cd .."
 alias openwebui="docker run -d -p 3000:8080 -v open-webui:/app/backend/data --name open-webui ghcr.io/open-webui/open-webui:main"
+alias fetch="clear && fastfetch"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -75,3 +76,8 @@ alias openwebui="docker run -d -p 3000:8080 -v open-webui:/app/backend/data --na
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/fran/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

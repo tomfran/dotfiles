@@ -1,4 +1,4 @@
-theme = dark:tokyonight,light:zenwritten_light
+theme = dark:tokyonight,light:tokyonight-day
 
 font-family = "BlexMono Nerd Font"
 font-size = "18"

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "small", // Small logo size
+    "padding": {
+      "top": 1,
+      "left": 2,
+      "right": 5
+    }
+  },
+  "display": {
+    "separator": "", // Keeps the separator as ": "
+    "color": {
+      "keys": "blue",
+      "title": "red"
+    },
+    "key": {
+      "width": 10,
+      "type": "none" // Display the keys as strings
+    },
+    "brightColor": true
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "\n\n"
+    },
+    {
+      "type": "os",
+      "key": "OS",
+      "keyColor": "blue",
+      "format": "{name} {codename}" // Shortened OS name (e.g., "macOS" instead of "macOS Sequoia")
+    },
+    {
+      "type": "host",
+      "key": "Host",
+      "keyColor": "blue",
+      "format": "MacBook Pro" // Shortened host name (e.g., "MacBook Pro" instead of full details)
+    },
+    {
+      "type": "cpu",
+      "key": "CPU",
+      "keyColor": "blue",
+      "format": "{name}" // Shortened CPU name (e.g., "Apple M3 Pro")
+    },
+    {
+      "type": "memory",
+      "key": "Memory",
+      "keyColor": "blue",
+      "format": "{used} / {total}" // Show just the memory usage and total
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime",
+      "keyColor": "blue"
+    }
+  ]
+}
