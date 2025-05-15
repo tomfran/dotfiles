@@ -20,4 +20,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
+.*.DS_Store.*
+
 Makefile
