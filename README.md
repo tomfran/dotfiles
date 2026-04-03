@@ -1,5 +1,17 @@
 # Dotfiles
 
-1. Install GNU stow with `brew install stow`
-2. Remove or move any file or directory contained here.
-3. `mkdir $HOME/dotfiles && cd $HOME/dotfiles && stow .`
+![Desktop](images/desktop.webp)
+
+## Install
+
+Clone in your home directory:
+
+```
+cd && git clone git@github.com:tomfran/dotfiles.git
+```
+
+Create simlinks: 
+
+```
+make stow
+```

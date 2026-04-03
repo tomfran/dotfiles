@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt.
+# Powerlevel10k
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -16,6 +16,9 @@ source "${ZINIT_HOME}/zinit.zsh"
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Go
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 # Powerlevel10k
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -23,9 +26,8 @@ zinit ice depth=1; zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab 
+zinit light Aloxaf/fzf-tab
 zinit snippet OMZP::git
-zinit snippet OMZP::sudo
 
 # Load completions
 autoload -Uz compinit && compinit
@@ -56,15 +58,21 @@ setopt hist_find_no_dups
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Aliases
-alias update="brew update && brew upgrade && brew upgrade --cask --greedy && brew autoremove && brew cleanup --prune=all"
-alias ls="ls --color"
-alias ll="ls -l"
+export XDG_CONFIG_HOME="$HOME/.config"
 
+source ~/.config/zsh/functions.zsh
+source ~/.config/zsh/aliases.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # FZF
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# Docker Desktop
+fpath=(/Users/fran/.docker/completions $fpath)
+autoload -Uz compinit
+compinit

@@ -1,0 +1,4 @@
+*.DS_Store
+.config/mole/
+.config/opencode/
+.zshenv

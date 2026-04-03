@@ -1,0 +1,13 @@
+theme = dark: Adwaita Dark, light: Adwaita
+
+font-family = "BlexMono Nerd Font"
+font-size = "18"
+
+window-padding-x = 15
+window-padding-y = 15
+
+macos-titlebar-proxy-icon = hidden
+window-theme = auto
+confirm-close-surface = false
+
+macos-titlebar-style = hidden
