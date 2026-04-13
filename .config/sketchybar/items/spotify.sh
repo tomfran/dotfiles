@@ -11,7 +11,7 @@ spotify_text=(
 	padding_left=0
 	click_script="open -a Spotify"
 	script="$PLUGIN_DIR/spotify.sh"
-	updates=when_shown
+	updates=on
 )
 
 spotify_cover=(
@@ -26,7 +26,7 @@ spotify_cover=(
 	padding_right=5
 	click_script="open -a Spotify"
 	script="$PLUGIN_DIR/spotify.sh"
-	updates=when_shown
+	updates=on
 )
 
 sketchybar --add item spotify.text right \

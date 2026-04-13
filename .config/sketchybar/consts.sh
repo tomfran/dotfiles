@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FONT_DEFAULT="Sf Mono:Medium:15.5"
+FONT_DEFAULT="SF Mono:Medium:15.5"
 FONT_ITALIC="SF Mono:Medium Italic:15.5"
 
 export WHITE=0xffffffff
